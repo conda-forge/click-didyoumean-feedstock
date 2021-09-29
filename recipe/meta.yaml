@@ -1,5 +1,5 @@
 {% set name = "click-didyoumean" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 00136c217f7fb2ab2999c272cfbd0c14cd2d6c7a643318a954357e2fc3ea7beb
+  sha256: f184f0d851d96b6d29297354ed981b7dd71df7ff500d82fa6d11f0856bee8035
 
 build:
   noarch: python
