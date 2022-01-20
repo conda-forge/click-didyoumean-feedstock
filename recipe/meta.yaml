@@ -1,5 +1,5 @@
 {% set name = "click-didyoumean" %}
-{% set version = "0.0.3" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,24 +7,29 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 112229485c9704ff51362fe34b2d4f0b12fc71cc20f6d2b3afabed4b8bfa6aeb
+  sha256: 00136c217f7fb2ab2999c272cfbd0c14cd2d6c7a643318a954357e2fc3ea7beb
 
 build:
   noarch: python
   number: 0
-  script: '{{ PYTHON }} -m pip install . -vv'
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - poetry-core
+    - python >=3.6.2
   run:
-    - click
-    - python
+    - click >=8.0.1,<9.0.0
+    - python >=3.6.2,<4.0.0
 
 test:
+  requires:
+    - pip
   imports:
     - click_didyoumean
+  commands:
+    - python -m pip check
 
 about:
   home: https://github.com/timofurrer/click-didyoumean
