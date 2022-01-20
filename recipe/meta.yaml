@@ -17,14 +17,19 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - poetry-core
+    - python >=3.6.2
   run:
-    - click
-    - python
+    - click >=8.0.1,<9.0.0
+    - python >=3.6.2,<4.0.0
 
 test:
+  requires:
+    - pip
   imports:
     - click_didyoumean
+  commands:
+    - python -m pip check
 
 about:
   home: https://github.com/timofurrer/click-didyoumean
