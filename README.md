@@ -1,7 +1,7 @@
 About click-didyoumean
 ======================
 
-Home: https://github.com/timofurrer/click-didyoumean
+Home: https://github.com/click-contrib/click-didyoumean
 
 Package license: MIT
 
